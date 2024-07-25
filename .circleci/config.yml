@@ -16,7 +16,7 @@ jobs:
          command: wmic product get name,version
          shell: cmd.exe
       - run:
-         command: choco list --local-only
+         command: choco list --local
          shell: cmd.exe
       - run:
          command: Get-WmiObject -Class Win32_Product | Select-Object -Property Name, Version
